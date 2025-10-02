@@ -1,0 +1,10 @@
+FROM openjdk:11-jre-slim
+
+WORKDIR /app
+
+COPY HelloWorld.java .
+COPY compile-and-run.sh .
+
+RUN chmod +x compile-and-run.sh
+
+CMD ["./compile-and-run.sh"]
